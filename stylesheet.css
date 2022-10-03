@@ -2,9 +2,15 @@ body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;
     color: black;
+}
+i{
+    color: #0065FC;
 }
 /* header */
 header{
@@ -33,6 +39,28 @@ header nav ul :first-child a::before{
     top: -36px;
     left: 0px;
 }
+header nav ul :nth-child(2){
+    position: relative;
+    transition: 0.5s;
+}
+header nav ul :nth-child(2) a::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: #0065FC;
+    position: absolute;
+    top: -36px;
+    left: 0px;
+    transform-origin: left;
+    transition: 0.5s;
+}
+header nav ul :nth-child(2):hover a{
+    color: blue;
+    font-weight: bold;
+}
+header nav ul :nth-child(2):hover a::before{
+    width: 100%;
+}
 /* Filtres */
 .search-bar{
     display: flex;
@@ -41,26 +69,30 @@ header nav ul :first-child a::before{
     width: 300px;
     border-radius: 15px;
     overflow: hidden;
-    border:1px solid rgb(209, 209, 209);
+    border:1px solid rgb(242,242,242);
     margin-bottom: 20px;
 }
 .search-bar > div{
-    width: 40px;
-    background-color: rgb(209, 209, 209);
+    width: 39px;
+    background-color: rgb(242,242,242);
     height: 40px;
     display: grid;
     place-content: center;
 }
-.search-bar > p{
+.search-bar > input{
     padding-left: 10px;
     font-weight: bold;
+    height: 36px;
+    border: none;
 }
+
 .search-bar > button{
     margin-left: auto;
     height: 40px;
     background-color: #0065FC;
     border: 1px solid #0065FC;
     color: white;
+    cursor: pointer;
 }
 .filtres{
     margin: 20px 3vw 0 3vw;
@@ -72,21 +104,21 @@ header nav ul :first-child a::before{
 .filtre p{
     font-weight: 900;
 }
-.filtre div{
+.filtre a{
     display: flex;
     align-items: center;
-    border: 2px solid rgb(209, 209, 209) ;
+    border: 2px solid rgb(242,242,242) ;
     border-radius: 50px;
 }
-.filtre div i{
+.filtre a i{
     background-color: #DEEBFF;
-    height: 50px;
-    width: 50px;
+    height: 51px;
+    width: 51px;
     border-radius: 50%;
     display: grid;
     place-content: center;
 }
-.filtre div p{
+.filtre a p{
     margin: 0 15px;
 }
 .information{
@@ -107,7 +139,7 @@ main p, main h3{
 }
 /* HEBERGEMENTS */
 .hébergements{
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(242,242,242);
     width: 60vw;
     border-radius: 30px;
     padding: 20px;
@@ -147,6 +179,9 @@ main p, main h3{
     font-weight: 900;
     font-size: 20px;
 }
+.prix{
+    font-weight: 900;
+}
 .note{
     display: flex;
     margin-left: 15px;
@@ -154,10 +189,15 @@ main p, main h3{
 }
 /* POPULAIRES */
 .populaires{
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(242,242,242);
     width: 25vw;
     border-radius: 30px;
     padding: 20px;
+}
+.populaires h2{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
 }
 .populaire{
     background-color: white;
@@ -170,7 +210,7 @@ main p, main h3{
     box-shadow:  0px 6px 19px 0px rgba(0,0,0,0.40);
     border-radius: 30px;
     overflow: hidden;
-    margin: 40px 5%;
+    margin: 40px 4%;
     transition: 0.5s;
 }
 .populaire img{
@@ -226,7 +266,7 @@ margin-top: 12px;
 /* FOOTER */
 footer{
     width: 100%;
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(242,242,242);
     display: flex;
 }
 footer div{
@@ -251,5 +291,5 @@ footer ul li{
     transform: scale(1.15);
 }
 .activité.big:hover{
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
