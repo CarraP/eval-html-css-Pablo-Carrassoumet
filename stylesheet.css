@@ -17,9 +17,22 @@ header ul{
 }
 header ul li{
     list-style: none;
-    margin-left: 10px;
+    margin-left: 50px;
 }
-
+header nav ul :first-child a, header nav ul :last-child a{
+    color: #0065FC;
+    font-weight: bold;
+    position: relative;
+}
+header nav ul :first-child a::before{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #0065FC;
+    position: absolute;
+    top: -36px;
+    left: 0px;
+}
 /* Filtres */
 .search-bar{
     display: flex;
@@ -29,6 +42,7 @@ header ul li{
     border-radius: 15px;
     overflow: hidden;
     border:1px solid rgb(209, 209, 209);
+    margin-bottom: 20px;
 }
 .search-bar > div{
     width: 40px;
@@ -39,7 +53,7 @@ header ul li{
 }
 .search-bar > p{
     padding-left: 10px;
-    color: rgb(150, 146, 146);
+    font-weight: bold;
 }
 .search-bar > button{
     margin-left: auto;
@@ -54,6 +68,9 @@ header ul li{
 .filtre{
     display: flex;
     gap: 20px;
+}
+.filtre p{
+    font-weight: 900;
 }
 .filtre div{
     display: flex;
@@ -71,6 +88,12 @@ header ul li{
 }
 .filtre div p{
     margin: 0 15px;
+}
+.information{
+    display: flex;
+}
+.information i{
+    margin: auto 10px auto 0;
 }
 /* MAIN */
 .mainTop{
@@ -106,6 +129,7 @@ main p, main h3{
     border-radius: 30px;
     overflow: hidden;
     margin: 20px;
+    transition: 0.5s;
 }
 .hébergement-text{
     position: relative;
@@ -122,6 +146,11 @@ main p, main h3{
     padding-top: 15px;
     font-weight: 900;
     font-size: 20px;
+}
+.note{
+    display: flex;
+    margin-left: 15px;
+    margin-top: auto;
 }
 /* POPULAIRES */
 .populaires{
@@ -142,6 +171,7 @@ main p, main h3{
     border-radius: 30px;
     overflow: hidden;
     margin: 40px 5%;
+    transition: 0.5s;
 }
 .populaire img{
     object-fit: cover;
@@ -171,6 +201,7 @@ main p, main h3{
     box-shadow:  0px 6px 19px 0px rgba(0,0,0,0.40);
     border-radius: 30px;
     overflow: hidden;
+    transition: 0.5s;
 }
 .big{
     height: 600px;
@@ -209,3 +240,13 @@ footer ul li{
     margin-bottom: 10px;
 }
 
+/* ANIMATION */
+.hébergement:hover{
+    transform: scale(1.15);
+}
+.populaire:hover{
+    transform: scale(1.15);
+}
+.activité:hover{
+    transform: scale(1.15);
+}
