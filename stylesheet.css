@@ -247,6 +247,9 @@ footer ul li{
 .populaire:hover{
     transform: scale(1.15);
 }
-.activité:hover{
+.activité.small:hover{
     transform: scale(1.15);
+}
+.activité.big:hover{
+    transform: scale(1.1);
 }
