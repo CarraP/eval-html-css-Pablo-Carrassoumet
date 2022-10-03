@@ -109,6 +109,10 @@ header nav ul :nth-child(2):hover a::before{
     align-items: center;
     border: 2px solid rgb(242,242,242) ;
     border-radius: 50px;
+    transition: 0.5s;
+}
+.filtre a:hover{
+    background-color: #F2F2F2;
 }
 .filtre a i{
     background-color: #DEEBFF;
