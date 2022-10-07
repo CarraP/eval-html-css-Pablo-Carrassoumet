@@ -27,15 +27,14 @@ header ul{
 header ul li{
     list-style: none;
     margin-left: 50px;
+    position: relative;
+    transition: 0.5s;
+    font-weight: 900;
 }
  header nav ul :last-child a{
     color: #0065FC;
     font-weight: bold;
     font-weight: 900;
-}
-header nav ul li{
-    position: relative;
-    transition: 0.5s;
 }
 header nav ul :where(:nth-child(2),:nth-child(1)) a::before{
     content: "";
